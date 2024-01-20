@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Anatoly_zh </title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <title>Детские фотографии</title>
+</head>
+<script type="text/javascript">
+    var NewYer = new Array("n01-min.jpg", "n02-min.jpg");
+    var NewYear = new Array("n03-min.jpg", "n04-min.jpg","n05-min.jpg", "n06-min.jpg","n07-min.jpg", "n08-min.jpg", "n09-min.jpg");
+    var locations = new Array("g01.jpg", "g02.jpg");
+    var locaut = new Array("v001.jpg", "v002.jpg", "v003.jpg", "v004.jpg","v005.jpg");
+    var locauts = new Array("k001.jpg", "k002.jpg", "k003.jpg", "k004.jpg", "k005.jpg", "k006.jpg", "k007.jpg", "k008.jpg", "k009.jpg", "k010.jpg", "k011.jpg","k012.jpg");
+
+
+    function nextImage(arrImg, imgName, buttonId) {
+
+        var button = document.getElementById(buttonId);
+        var currentImage = parseInt(button.getAttribute('data-current-index'), 10);
+
+        currentImage++;
+        if (currentImage >= arrImg.length) {
+            currentImage = 0;
+        }
+
+        document.images[imgName].src = arrImg[currentImage];
+        button.setAttribute('data-current-index', currentImage.toString());
+
+        return false;
+    }
+
+</script>
+
+<body>
+    <div class="container">
+        <h1> Образцы детский фотографий</h1>
+            <div class="obshie">
+                <h3>Новогодний календарь
+                    <br>
+                    Cтоимость календаря 400 руб, размер
+                    А4 (21х30) см, по умолчанию фотографии ламинируются.
+                </h3>
+            </div>
+            <img src="n01-min.jpg" name="picture4" width="1528">
+            <br />
+            <div class="center">        <input type="button" id="button4" onclick="return nextImage(NewYer, 'picture4', 'button4')"
+                data-current-index="0" value="Следующее фото" /></div>
+
+            <hr align="middle" size="5" color="red" width="100%">
+                <div class="obshie">
+                    <h3>Новогодние коллажи печатаются в размерах:</h3>
+                    <h4> 10х15 270 руб 15х20 340 руб 21х30 450руб за одно фото</h4>
+                </div>
+                <img src="n03-min.jpg" name="picture5" width="1528">
+                <br />
+                <div class="center">        <input type="button" id="button5" onclick="return nextImage(NewYear, 'picture5', 'button5')"
+                    data-current-index="0" value="Следующее фото" /></div>
+
+                <hr align="middle" size="5" color="red" width="100%">
+                <div class="obshie">
+            <h3>Групповые фотографии одним снимком
+                <br>
+                Cтоимость таких групповых фотографий 380 руб, размер
+                А4 (21х30) см, по умолчанию фотографии ламинируются.
+            </h3>
+        </div>
+        <img src="g01.jpg" name="picture" width="1528">
+        <br />
+        <div class="center">        <input type="button" id="button1" onclick="return nextImage(locations, 'picture', 'button1')"
+            data-current-index="0" value="Следующее фото" /></div>
+
+        <hr align="middle" size="5" color="red" width="100%">
+        <div class="obshie">
+            <h3>Общие фотографии "виньетки"</h3>
+            <h4>Cтоимость таких фотографий 460 руб, размер А4 (21х30) см, по умолчанию фотографии ламинируются.
+            </h4>
+        </div>
+        <img src="v001.jpg" name="picture2" width="1528">
+        <br />
+        <div class="center"> <input type="button" id="button2" onclick="return nextImage(locaut, 'picture2', 'button2')"
+            data-current-index="0" value="Следующее фото" /></div>
+        <hr align="middle" size="5" color="red" width="100%">
+        
+        
+       
+        <div class="obshie">
+            <h3>Детские коллажи печатаются в размерах:</h3>
+            <h4> 10х15 270 руб 15х20 340 руб 21х30 450руб за одно фото</h4>
+        </div>
+        <img src="k001.jpg" name="picture3" width="1080" class="foto">
+        <br />
+        <div class="center"><input type="button" id="button3" onclick="return nextImage(locauts, 'picture3', 'button3')"
+                data-current-index="0" value="Следующее фото" /></div>
+    </div>
+</body>
+
+</html>
