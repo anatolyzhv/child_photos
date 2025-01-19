@@ -6,6 +6,7 @@
 }
 .menu {display: block;}
 
+
 :root {
     --swiper-navigation-sides-offset: 25px; 
     --swiper-navigation-color: white;
@@ -29,6 +30,7 @@
         position: absolute;
         
     }
+
 
 .obshie  {
    
